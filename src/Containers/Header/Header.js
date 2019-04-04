@@ -9,7 +9,7 @@ const header = props => {
     <div className={style.Header}>
       <p>Log in</p>
       <Logo />
-      <Navigation />
+      <Navigation MenuBtnClicked={props.MenuBtnClicked} />
     </div>
   );
 };

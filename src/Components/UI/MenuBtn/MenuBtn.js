@@ -2,7 +2,7 @@ import React from "react";
 
 const menuBtn = props => {
   return (
-    <div>
+    <div onClick={props.clicked}>
       <p>MenuBtn</p>
     </div>
   );

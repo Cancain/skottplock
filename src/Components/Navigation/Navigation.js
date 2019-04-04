@@ -6,7 +6,7 @@ import MenuBtn from "../UI/MenuBtn/MenuBtn";
 const navigation = props => {
   return (
     <div>
-      <MenuBtn />
+      <MenuBtn clicked={props.MenuBtnClicked} />
     </div>
   );
 };
