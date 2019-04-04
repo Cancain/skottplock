@@ -1,6 +1,11 @@
 .Sidebar {
+  position: absolute;
   width: 75%;
   border: 1px solid black;
   height: 90vh;
   background-color: green;
+}
+
+.closed {
+  left: -1000px;
 }
