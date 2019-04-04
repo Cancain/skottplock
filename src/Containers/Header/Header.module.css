@@ -1,0 +1,9 @@
+.Header {
+  width: 100%;
+  border: 1px solid black;
+  height: 10vh;
+  background: gray;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
