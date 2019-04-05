@@ -1,9 +1,6 @@
 .Header {
+  display: border-box;
   width: 100%;
-  border: 1px solid black;
-  height: 10vh;
+  height: 80px;
   background: gray;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
 }

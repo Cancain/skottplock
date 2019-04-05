@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Header from "../../Containers/Header/Header";
-import Sidebar from "../../Containers/Sidebar/Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
+import MainMenu from "../../Containers/Navigation/MainMenu/MainMenu";
 import Content from "../../hoc/Content/Content";
 import About from "../../Containers/About/About";
 import Contact from "../../Containers/Contact/Constact";
@@ -26,7 +27,9 @@ const layout = props => {
     <div>
       <Header MenuBtnClicked={menuBtnClickHandler} />
       <div style={containerStyle}>
-        <Sidebar closed={sideDrawerClosed} />
+        <Sidebar closed={sideDrawerClosed}>
+          <MainMenu />
+        </Sidebar>
         <Content>
           <Switch>
             <Route path="/about" component={About} />

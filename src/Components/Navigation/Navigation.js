@@ -1,11 +1,15 @@
 import React from "react";
 
-import NavBar from "./NavBar/NavBar";
+import style from "./Navigation.module.css";
 import MenuBtn from "../UI/MenuBtn/MenuBtn";
+import Logo from "../Logo/Logo";
+import ShoppingCartBtn from "../UI/ShoppingCartBtn/ShoppingCartBtn";
 
 const navigation = props => {
   return (
-    <div>
+    <div className={style.Navigation}>
+      <ShoppingCartBtn />
+      <Logo />
       <MenuBtn clicked={props.MenuBtnClicked} />
     </div>
   );

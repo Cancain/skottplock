@@ -1,0 +1,21 @@
+.ShoppingCartBtn {
+  font-size: 40px;
+  top: 17px;
+  height: 50px;
+  width: fit-content;
+  height: 40px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  padding: 4px;
+  display: inline-block;
+}
+
+.ShoppingCartBtn i {
+  position: relative;
+  top: -12px;
+  text-shadow: 2px 2px 2px gray;
+  margin-bottom: 20px;
+}

@@ -1,9 +1,13 @@
 import React from "react";
 
+import style from "./MenuBtn.module.css";
+
 const menuBtn = props => {
   return (
-    <div onClick={props.clicked}>
-      <p>MenuBtn</p>
+    <div className={style.MenuBtn} onClick={props.clicked}>
+      <div />
+      <div />
+      <div />
     </div>
   );
 };
