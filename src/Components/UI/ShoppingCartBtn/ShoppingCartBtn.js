@@ -3,8 +3,14 @@ import React from "react";
 import style from "./ShoppingCartBtn.module.css";
 
 const shoppingCartBtn = props => {
+  console.log(props.activeMenu);
+
+  let classes = [
+    style.ShoppingCartBtn,
+    props.activeMenu === "shoppingMenu" ? style.Pressed : null
+  ];
   return (
-    <div className={style.ShoppingCartBtn} onClick={props.clicked}>
+    <div className={classes.join(" ")} onClick={props.clicked}>
       <i className="fas fa-shopping-cart" />
     </div>
   );

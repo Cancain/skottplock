@@ -8,6 +8,7 @@ const header = props => {
   return (
     <div className={style.Header}>
       <Navigation
+        activeMenu={props.activeMenu}
         menuBtnClicked={props.menuBtnClicked}
         shoppingBtnClicked={props.shoppingBtnClicked}
       />

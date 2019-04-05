@@ -8,9 +8,12 @@ import ShoppingCartBtn from "../UI/ShoppingCartBtn/ShoppingCartBtn";
 const navigation = props => {
   return (
     <div className={style.Navigation}>
-      <ShoppingCartBtn clicked={props.shoppingBtnClicked} />
+      <ShoppingCartBtn
+        activeMenu={props.activeMenu}
+        clicked={props.shoppingBtnClicked}
+      />
       <Logo />
-      <MenuBtn clicked={props.menuBtnClicked} />
+      <MenuBtn activeMenu={props.activeMenu} clicked={props.menuBtnClicked} />
     </div>
   );
 };
