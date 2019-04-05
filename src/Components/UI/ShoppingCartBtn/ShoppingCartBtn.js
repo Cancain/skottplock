@@ -3,8 +3,6 @@ import React from "react";
 import style from "./ShoppingCartBtn.module.css";
 
 const shoppingCartBtn = props => {
-  console.log(props.activeMenu);
-
   let classes = [
     style.ShoppingCartBtn,
     props.activeMenu === "shoppingMenu" ? style.Pressed : null
