@@ -7,7 +7,10 @@ import Navigation from "../../Components/Navigation/Navigation";
 const header = props => {
   return (
     <div className={style.Header}>
-      <Navigation MenuBtnClicked={props.MenuBtnClicked} />
+      <Navigation
+        menuBtnClicked={props.menuBtnClicked}
+        shoppingBtnClicked={props.shoppingBtnClicked}
+      />
     </div>
   );
 };
