@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { Route, Switch } from "react-router-dom";
 
 import Header from "../../Containers/Header/Header";
 import Sidebar from "../../Containers/Sidebar/Sidebar";
 import Content from "../../hoc/Content/Content";
+import About from "../../Containers/About/About";
+import Contact from "../../Containers/Contact/Constact";
+import Home from "../../Containers/Home/Home";
 
 const layout = props => {
   const [sideDrawerClosed, setSideDrawerClosed] = useState(true);
@@ -16,7 +20,6 @@ const layout = props => {
 
   const menuBtnClickHandler = () => {
     setSideDrawerClosed(!sideDrawerClosed);
-    console.log(sideDrawerClosed);
   };
 
   return (
@@ -24,7 +27,13 @@ const layout = props => {
       <Header MenuBtnClicked={menuBtnClickHandler} />
       <div style={containerStyle}>
         <Sidebar closed={sideDrawerClosed} />
-        <Content />
+        <Content>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/" exact component={Home} />
+          </Switch>
+        </Content>
       </div>
     </div>
   );
