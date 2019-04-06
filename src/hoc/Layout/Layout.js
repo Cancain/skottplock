@@ -9,6 +9,7 @@ import Content from "../../hoc/Content/Content";
 import About from "../../Containers/About/About";
 import Contact from "../../Containers/Contact/Constact";
 import Home from "../../Containers/Home/Home";
+import ProductDisplay from "../../Containers/ProductDisplay/ProductDisplay";
 
 const layout = props => {
   const [sideDrawerClosed, setSideDrawerClosed] = useState(true);
@@ -64,6 +65,7 @@ const layout = props => {
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/product" component={ProductDisplay} />
             <Route path="/" exact component={Home} />
           </Switch>
         </Content>
