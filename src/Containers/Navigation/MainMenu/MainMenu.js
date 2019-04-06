@@ -1,20 +1,24 @@
 import React from "react";
 
+import { clones } from "../../../MockData/Products";
 import NavigationItem from "../../../Components/Navigation/NavigationItem/NavigationItem";
 
 const mainMenu = props => {
-  const mockItem = [
-    { text: "item1", link: "/contact" },
-    { text: "item2", link: "/about" },
-    { text: "item3", link: "/" }
-  ];
+  const skott = clones.map(item => {
+    return (
+      <NavigationItem
+        key={item.id}
+        text={item.name}
+        subItems={item.subItems}
+        price={item.price}
+      />
+    );
+  });
 
   return (
     <div>
       <h1>Main Menu</h1>
-      <NavigationItem subItems={mockItem} link={"/about"} text={"Stuff"} />
-      <NavigationItem text={"More stuff"} />
-      <NavigationItem text={"Even more stuff"} />
+      {skott}
     </div>
   );
 };

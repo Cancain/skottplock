@@ -7,8 +7,8 @@ const navigationItem = props => {
   if (props.subItems) {
     subItems = props.subItems.map(item => {
       return (
-        <li>
-          <NavLink to={item.link}>{item.text}</NavLink>
+        <li key={item.id}>
+          <NavLink to={item.link}>{item.name}</NavLink>
         </li>
       );
     });
