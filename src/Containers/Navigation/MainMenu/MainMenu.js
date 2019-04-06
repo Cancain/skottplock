@@ -1,9 +1,11 @@
 import React from "react";
 
+import NavigationItem from "../../../Components/Navigation/NavigationItem/NavigationItem";
+
 const mainMenu = props => {
   return (
     <div>
-      <p>Main Menu</p>
+      <NavigationItem />
     </div>
   );
 };

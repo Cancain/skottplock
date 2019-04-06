@@ -48,6 +48,9 @@ const layout = props => {
     }
   };
 
+  let menu = <MainMenu />;
+  if (activeMenu === "shoppingMenu") menu = <ShoppingMenu />;
+
   return (
     <div>
       <Header
@@ -56,7 +59,7 @@ const layout = props => {
         shoppingBtnClicked={() => menuClickHandler(ShoppingMenu)}
       />
       <div style={containerStyle}>
-        <Sidebar closed={sideDrawerClosed}>{menuComponent}</Sidebar>
+        <Sidebar closed={sideDrawerClosed}>{menu}</Sidebar>
         <Content>
           <Switch>
             <Route path="/about" component={About} />
