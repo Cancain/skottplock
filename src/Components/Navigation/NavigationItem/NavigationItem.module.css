@@ -1,0 +1,19 @@
+.NavigationItem {
+  text-align: start;
+  margin-left: 5%;
+  font-size: 1.5rem;
+}
+
+.NavigationItem a {
+  text-decoration: none;
+  color: black;
+}
+
+.NavigationItem ul {
+}
+
+.NavigationItem ul li {
+  color: red;
+  list-style: none;
+  margin-left: 3%;
+}

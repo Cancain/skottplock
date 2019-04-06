@@ -1,9 +1,14 @@
 import React from "react";
 
+import NavigationItem from "../../../Components/Navigation/NavigationItem/NavigationItem";
+
 const shoppingMenu = props => {
   return (
     <div>
-      <p>Shopping Menu</p>
+      <h1>Shopping Menu</h1>
+      <NavigationItem text={"Stuff"} />
+      <NavigationItem text={"More stuff"} />
+      <NavigationItem text={"Even more stuff"} />
     </div>
   );
 };
