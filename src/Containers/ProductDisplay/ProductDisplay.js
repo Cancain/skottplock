@@ -4,8 +4,7 @@ import { clones } from "../../MockData/Products";
 
 const productDisplay = props => {
   const product = new URLSearchParams(props.location.search);
-  console.log(product.get("id"));
-  console.log(clones[product.get("id")]);
+  console.log(props.location);
 
   return (
     <div>
