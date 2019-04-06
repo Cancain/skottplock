@@ -1,6 +1,6 @@
 const chiliSubItems = [
-  { id: 0, name: "Basket of fire", price: 30 },
-  { id: 1, name: "Jalapeño", price: 32 }
+  { id: 0, name: "Basket of fire", price: 30, parentId: 0 },
+  { id: 1, name: "Jalapeño", price: 32, parentId: 0 }
 ];
 
 export const clones = [

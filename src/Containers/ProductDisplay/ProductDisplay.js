@@ -4,11 +4,10 @@ import { clones } from "../../MockData/Products";
 
 const productDisplay = props => {
   const product = new URLSearchParams(props.location.search);
-  console.log(props.location);
 
   return (
     <div>
-      <h1>aa</h1>
+      <h1>{clones[product.get("id")].subItems[product.get("subId")].name}</h1>
     </div>
   );
 };
