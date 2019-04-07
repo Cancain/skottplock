@@ -43,7 +43,7 @@ const layout = props => {
     }
   };
 
-  const productClickHandler = () => {
+  const hideMenuHandler = () => {
     setSideDrawerClosed(true);
     setActiveMenu(null);
   };
@@ -55,12 +55,13 @@ const layout = props => {
     border: "1px solid black"
   };
 
-  let menu = <MainMenu productClicked={productClickHandler} />;
+  let menu = <MainMenu productClicked={hideMenuHandler} />;
   if (activeMenu === "shoppingMenu") menu = <ShoppingMenu />;
 
   return (
     <div>
       <Header
+        logoClicked={hideMenuHandler}
         activeMenu={activeMenu}
         menuBtnClicked={() => menuClickHandler(MainMenu)}
         shoppingBtnClicked={() => menuClickHandler(ShoppingMenu)}

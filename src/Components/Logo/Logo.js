@@ -6,7 +6,7 @@ import style from "./Logo.module.css";
 const logo = props => {
   return (
     <div className={style.Logo}>
-      <NavLink to="/">
+      <NavLink onClick={props.clicked} to="/">
         <p>Skottplock</p>
       </NavLink>
     </div>

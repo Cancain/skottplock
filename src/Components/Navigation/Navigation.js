@@ -12,7 +12,7 @@ const navigation = props => {
         activeMenu={props.activeMenu}
         clicked={props.shoppingBtnClicked}
       />
-      <Logo />
+      <Logo clicked={props.logoClicked} />
       <MenuBtn activeMenu={props.activeMenu} clicked={props.menuBtnClicked} />
     </div>
   );
