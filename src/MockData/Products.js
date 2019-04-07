@@ -27,5 +27,5 @@ const chiliSubItems = [
 
 export const clones = [
   { id: 0, name: "Chili", price: 20, subItems: chiliSubItems },
-  { id: 1, name: "Tomato", price: 25 }
+  { id: 1, name: "Tomat", price: 25 }
 ];

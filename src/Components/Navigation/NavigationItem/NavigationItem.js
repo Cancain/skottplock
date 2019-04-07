@@ -8,7 +8,10 @@ const navigationItem = props => {
     subItems = props.subItems.map(item => {
       return (
         <li key={item.id}>
-          <NavLink to={"/product/?id=" + item.parentId + "&subId=" + item.id}>
+          <NavLink
+            onClick={props.clicked}
+            to={"/product/?id=" + item.parentId + "&subId=" + item.id}
+          >
             {item.name}
           </NavLink>
         </li>
@@ -19,7 +22,9 @@ const navigationItem = props => {
   return (
     <div className={style.NavigationItem}>
       <ul>
-        <NavLink to={props.link}>{props.text}</NavLink>
+        <h4 style={{ margin: 0 }} to={props.link}>
+          {props.text}
+        </h4>
         {subItems}
       </ul>
     </div>

@@ -16,13 +16,6 @@ const layout = props => {
   const [menuComponent, setMenuComponent] = useState(ShoppingMenu.name);
   const [activeMenu, setActiveMenu] = useState(null);
 
-  const containerStyle = {
-    display: "flex",
-    flexFlow: "row",
-    backgroundColor: "yellow",
-    border: "1px solid black"
-  };
-
   //When a click on the menu is registered this function takes the component and either adds the correct menu to the sidebar or opens/closes the menu depending on it's current state. Only one menu will be loaded at the same time.
   const menuClickHandler = component => {
     if (menuComponent !== component.name && sideDrawerClosed === false) {
@@ -49,7 +42,14 @@ const layout = props => {
     }
   };
 
-  let menu = <MainMenu />;
+  const containerStyle = {
+    display: "flex",
+    flexFlow: "row",
+    backgroundColor: "yellow",
+    border: "1px solid black"
+  };
+
+  let menu = <MainMenu productClicked={() => setSideDrawerClosed(true)} />;
   if (activeMenu === "shoppingMenu") menu = <ShoppingMenu />;
 
   return (

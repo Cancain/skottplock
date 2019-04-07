@@ -7,6 +7,7 @@ const mainMenu = props => {
   const shoots = clones.map(item => {
     return (
       <NavigationItem
+        clicked={props.productClicked}
         key={item.id}
         text={item.name}
         subItems={item.subItems}
