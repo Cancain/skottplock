@@ -10,6 +10,7 @@ import About from "../../Containers/About/About";
 import Contact from "../../Containers/Contact/Constact";
 import Home from "../../Containers/Home/Home";
 import ProductDisplay from "../../Containers/ProductDisplay/ProductDisplay";
+import Backdrop from "../../Components/Backdrop/Backdrop";
 
 const layout = props => {
   const [sideDrawerClosed, setSideDrawerClosed] = useState(true);
@@ -42,6 +43,11 @@ const layout = props => {
     }
   };
 
+  const productClickHandler = () => {
+    setSideDrawerClosed(true);
+    setActiveMenu(null);
+  };
+
   const containerStyle = {
     display: "flex",
     flexFlow: "row",
@@ -49,7 +55,7 @@ const layout = props => {
     border: "1px solid black"
   };
 
-  let menu = <MainMenu productClicked={() => setSideDrawerClosed(true)} />;
+  let menu = <MainMenu productClicked={productClickHandler} />;
   if (activeMenu === "shoppingMenu") menu = <ShoppingMenu />;
 
   return (
@@ -62,6 +68,7 @@ const layout = props => {
       <div style={containerStyle}>
         <Sidebar closed={sideDrawerClosed}>{menu}</Sidebar>
         <Content>
+          <Backdrop closed={sideDrawerClosed} />
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />

@@ -25,7 +25,26 @@ const chiliSubItems = [
   }
 ];
 
+const tomatSubItems = [
+  {
+    id: 0,
+    name: "Tumbling Tom Yellow",
+    price: 24,
+    parentId: 1,
+    desc:
+      "En äkta hängtomat! Utvecklar långa, hängande grenar med mängder av små, gula, söta körsbärstomater under lång tid. Dekorativa plantor för ampel, balkonglåda och liknande."
+  },
+  {
+    id: 1,
+    name: "Brandywine",
+    price: 32,
+    parentId: 1,
+    desc:
+      "Kulturarv. Från 1885. En av de mest smakrika, äldre sorterna. Stora, rosa, plattrunda frukter på 200-400 gram, helt genomfärgade med fyllig underbar smak. För växthus och varma utelägen. Amatörsort."
+  }
+];
+
 export const clones = [
   { id: 0, name: "Chili", price: 20, subItems: chiliSubItems },
-  { id: 1, name: "Tomat", price: 25 }
+  { id: 1, name: "Tomat", price: 25, subItems: tomatSubItems }
 ];
