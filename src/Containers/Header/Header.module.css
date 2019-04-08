@@ -3,4 +3,12 @@
   width: 100%;
   height: 80px;
   background: gray;
+  border: 1px solid black;
+}
+
+@media (min-width: 1024px) {
+  .Header {
+    width: 60%;
+    margin: auto;
+  }
 }

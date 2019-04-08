@@ -6,3 +6,11 @@
   background-color: yellow;
   border: 1px solid black;
 }
+
+@media (min-width: 1024px) {
+  .Layout {
+    max-width: 60%;
+    min-width: 60%;
+    margin: auto;
+  }
+}
