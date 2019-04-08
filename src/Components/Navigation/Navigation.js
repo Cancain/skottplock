@@ -6,14 +6,23 @@ import Logo from "../Logo/Logo";
 import ShoppingCartBtn from "../UI/ShoppingCartBtn/ShoppingCartBtn";
 
 const navigation = props => {
+  const width = window.innerWidth;
+
+  const shoppingCartBtn = (
+    <ShoppingCartBtn
+      activeMenu={props.activeMenu}
+      clicked={props.shoppingBtnClicked}
+    />
+  );
+
+  const menuBtn = (
+    <MenuBtn activeMenu={props.activeMenu} clicked={props.menuBtnClicked} />
+  );
   return (
     <div className={style.Navigation}>
-      <ShoppingCartBtn
-        activeMenu={props.activeMenu}
-        clicked={props.shoppingBtnClicked}
-      />
+      {width <= props.breakpoint ? shoppingCartBtn : null}
       <Logo clicked={props.logoClicked} />
-      <MenuBtn activeMenu={props.activeMenu} clicked={props.menuBtnClicked} />
+      {width <= props.breakpoint ? menuBtn : null}
     </div>
   );
 };

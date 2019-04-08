@@ -17,6 +17,8 @@ const layout = props => {
   const [menuComponent, setMenuComponent] = useState(ShoppingMenu.name);
   const [activeMenu, setActiveMenu] = useState(null);
 
+  const breakpoint = 1024;
+
   //When a click on the menu is registered this function takes the component and either adds the correct menu to the sidebar or opens/closes the menu depending on it's current state. Only one menu will be loaded at the same time.
   const menuClickHandler = component => {
     if (menuComponent !== component.name && sideDrawerClosed === false) {
@@ -61,6 +63,7 @@ const layout = props => {
   return (
     <div>
       <Header
+        breakpoint={breakpoint}
         logoClicked={hideMenuHandler}
         activeMenu={activeMenu}
         menuBtnClicked={() => menuClickHandler(MainMenu)}
@@ -69,7 +72,7 @@ const layout = props => {
       <div style={containerStyle}>
         <Sidebar closed={sideDrawerClosed}>{menu}</Sidebar>
         <Content>
-          <Backdrop closed={sideDrawerClosed} />
+          <Backdrop clicked={hideMenuHandler} closed={sideDrawerClosed} />
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />

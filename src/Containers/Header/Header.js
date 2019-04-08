@@ -8,6 +8,7 @@ const header = props => {
   return (
     <div className={style.Header}>
       <Navigation
+        breakpoint={props.breakpoint}
         logoClicked={props.logoClicked}
         activeMenu={props.activeMenu}
         menuBtnClicked={props.menuBtnClicked}
