@@ -1,0 +1,25 @@
+.MainMenu {
+  background-color: #144900;
+  min-width: 90%;
+  width: fit-content;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.MainMenu ul {
+  margin-top: 0;
+}
+
+.Liner {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  color: #73b55b;
+  border-radius: 12px 12px 0 0;
+}
+
+@media (min-width: 1024px) {
+}

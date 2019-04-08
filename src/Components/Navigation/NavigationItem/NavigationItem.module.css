@@ -1,6 +1,6 @@
 .NavigationItem {
   text-align: start;
-  margin-left: 5%;
+  margin-left: 0%;
   font-size: 1.5rem;
 }
 
@@ -10,6 +10,7 @@
 }
 
 .NavigationItem ul {
+  padding: 5px;
 }
 
 .NavigationItem ul li {

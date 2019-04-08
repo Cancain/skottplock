@@ -2,8 +2,9 @@
   display: border-box;
   width: 100%;
   height: 80px;
-  background: gray;
-  border: 1px solid black;
+  background: #2b6d12;
+  border: 1px solid #144900;
+  opacity: 0.6;
 }
 
 @media (min-width: 1024px) {

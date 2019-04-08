@@ -1,6 +1,7 @@
 import React from "react";
 
 import { clones } from "../../../MockData/Products";
+import style from "./MainMenu.module.css";
 import NavigationItem from "../../../Components/Navigation/NavigationItem/NavigationItem";
 
 const mainMenu = props => {
@@ -21,7 +22,8 @@ const mainMenu = props => {
   if (width <= props.breakpoint) headline = <h1>Huvudmeny</h1>;
 
   return (
-    <div>
+    <div className={style.MainMenu}>
+      <div className={style.Liner}>Kategorier</div>
       {headline}
       {shoots}
     </div>

@@ -2,10 +2,11 @@
   width: 100vw;
   height: 100vh;
   background-color: transparent;
-  z-index: 200;
+  z-index: -1;
   position: fixed;
 }
 
 .Closed {
   background-color: rgba(0, 0, 0, 0.85);
+  z-index: 200;
 }

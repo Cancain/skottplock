@@ -4,11 +4,14 @@
   z-index: 0;
   text-align: center;
   margin: auto;
+  color: #73b55b;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-size: 1.4rem;
 }
 
 @media (min-width: 1024px) {
   .Content {
     width: 80%;
-    margin-left: 35%;
+    margin-left: 22.5%;
   }
 }
