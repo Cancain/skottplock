@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
 
 import style from "./Layout.module.css";
 import Header from "../../Containers/Header/Header";
@@ -7,10 +6,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import MainMenu from "../../Containers/Navigation/MainMenu/MainMenu";
 import ShoppingMenu from "../../Containers/Navigation/ShoppingMenu/ShoppingMenu";
 import Content from "../../hoc/Content/Content";
-import About from "../../Containers/About/About";
-import Contact from "../../Containers/Contact/Constact";
-import Home from "../../Containers/Home/Home";
-import ProductDisplay from "../../Containers/ProductDisplay/ProductDisplay";
+import Router from "../../Containers/Router/Router";
 import Backdrop from "../../Components/Backdrop/Backdrop";
 
 const layout = props => {
@@ -83,12 +79,7 @@ const layout = props => {
         {sidebar}
         <Content>
           {width <= breakpoint ? backdrop : null}
-          <Switch>
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/product" component={ProductDisplay} />
-            <Route path="/" exact component={Home} />
-          </Switch>
+          <Router />
         </Content>
       </div>
     </div>
