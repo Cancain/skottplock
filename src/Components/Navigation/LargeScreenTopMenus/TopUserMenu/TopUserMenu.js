@@ -5,7 +5,8 @@ import style from "./TopUserMenu.module.css";
 
 const topUserMenu = props => {
   const navStyle = {
-    color: "black",
+    color: "#a5da91",
+    textShadow: "2px 2px 2px black",
     margin: "0 20px 0 0"
   };
   return (

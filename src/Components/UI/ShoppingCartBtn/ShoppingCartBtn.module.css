@@ -4,7 +4,7 @@
   height: 50px;
   width: fit-content;
   height: 40px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
   position: relative;
   font-weight: bolder;
   background-color: rgba(0, 0, 0, 0.3);
@@ -21,5 +21,5 @@
 }
 
 .Pressed {
-  background-color: red;
+  background-color: #a5da91;
 }

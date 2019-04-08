@@ -6,6 +6,13 @@
   background-color: #144900;
 }
 
+@media (min-width: 1435px) {
+  .Layout {
+    max-width: 80%;
+    min-width: 80%;
+    margin: auto;
+  }
+}
 @media (min-width: 1024px) {
   .Layout {
     max-width: 60%;
