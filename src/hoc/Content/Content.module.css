@@ -1,4 +1,14 @@
 .Content {
   width: 100%;
   min-height: 90vh;
+  z-index: 0;
+  text-align: center;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .Content {
+    width: 80%;
+    margin-left: 20%;
+  }
 }

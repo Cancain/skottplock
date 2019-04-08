@@ -16,9 +16,13 @@ const mainMenu = props => {
     );
   });
 
+  const width = window.innerWidth;
+  let headline = null;
+  if (width <= props.breakpoint) headline = <h1>Huvudmeny</h1>;
+
   return (
     <div>
-      <h1>Huvudmeny</h1>
+      {headline}
       {shoots}
     </div>
   );

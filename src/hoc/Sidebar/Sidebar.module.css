@@ -10,3 +10,10 @@
 .closed {
   left: -10000px;
 }
+
+@media (min-width: 1024px) {
+  .Sidebar {
+    width: 20%;
+    z-index: 1;
+  }
+}

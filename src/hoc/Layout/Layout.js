@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
+import style from "./Layout.module.css";
 import Header from "../../Containers/Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import MainMenu from "../../Containers/Navigation/MainMenu/MainMenu";
@@ -17,6 +18,7 @@ const layout = props => {
   const [menuComponent, setMenuComponent] = useState(ShoppingMenu.name);
   const [activeMenu, setActiveMenu] = useState(null);
 
+  const width = window.innerWidth;
   const breakpoint = 1024;
 
   //When a click on the menu is registered this function takes the component and either adds the correct menu to the sidebar or opens/closes the menu depending on it's current state. Only one menu will be loaded at the same time.
@@ -50,15 +52,23 @@ const layout = props => {
     setActiveMenu(null);
   };
 
-  const containerStyle = {
-    display: "flex",
-    flexFlow: "row",
-    backgroundColor: "yellow",
-    border: "1px solid black"
-  };
-
-  let menu = <MainMenu productClicked={hideMenuHandler} />;
+  let menu = (
+    <MainMenu breakpoint={breakpoint} productClicked={hideMenuHandler} />
+  );
   if (activeMenu === "shoppingMenu") menu = <ShoppingMenu />;
+
+  const backdrop = (
+    <Backdrop clicked={hideMenuHandler} closed={sideDrawerClosed} />
+  );
+
+  let sidebar = <Sidebar closed={sideDrawerClosed}>{menu}</Sidebar>;
+  if (width >= breakpoint) {
+    sidebar = (
+      <Sidebar>
+        <MainMenu breakpoint={breakpoint} />
+      </Sidebar>
+    );
+  }
 
   return (
     <div>
@@ -69,10 +79,10 @@ const layout = props => {
         menuBtnClicked={() => menuClickHandler(MainMenu)}
         shoppingBtnClicked={() => menuClickHandler(ShoppingMenu)}
       />
-      <div style={containerStyle}>
-        <Sidebar closed={sideDrawerClosed}>{menu}</Sidebar>
+      <div className={style.Layout}>
+        {sidebar}
         <Content>
-          <Backdrop clicked={hideMenuHandler} closed={sideDrawerClosed} />
+          {width <= breakpoint ? backdrop : null}
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
