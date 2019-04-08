@@ -5,7 +5,8 @@ import About from "../../Containers/About/About";
 import Contact from "../../Containers/Contact/Constact";
 import Home from "../../Containers/Home/Home";
 import ProductDisplay from "../../Containers/ProductDisplay/ProductDisplay";
-
+import Login from "../Login/login.js";
+import Register from "../Register/Register";
 
 const router = props => {
   return (
@@ -14,6 +15,8 @@ const router = props => {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/product" component={ProductDisplay} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Route path="/" exact component={Home} />
       </Switch>
     </Fragment>

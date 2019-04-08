@@ -10,10 +10,10 @@ const topUserMenu = props => {
   };
   return (
     <div className={style.UserMenu}>
-      <NavLink style={navStyle} to="/">
+      <NavLink style={navStyle} to="/login">
         Logga in
       </NavLink>
-      <NavLink style={navStyle} to="/">
+      <NavLink style={navStyle} to="/register">
         Registrera
       </NavLink>
       <NavLink style={navStyle} to="/">
