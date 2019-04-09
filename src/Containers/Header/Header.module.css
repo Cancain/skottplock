@@ -4,12 +4,18 @@
   height: 80px;
   background: #2b6d12;
   border: 1px solid #144900;
-  /* opacity: 0.6; */
 }
-
 @media (min-width: 1024px) {
   .Header {
-    width: 60%;
+    max-width: 80%;
+    min-width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: 1402px) {
+  .Header {
+    max-width: 60%;
+    min-width: 60%;
     margin: auto;
   }
 }
