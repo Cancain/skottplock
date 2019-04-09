@@ -4,6 +4,9 @@ import Layout from "../hoc/Layout/Layout";
 import "./App.css";
 
 class App extends Component {
+  state = {
+    items: []
+  };
   render() {
     return (
       <div className="App">

@@ -7,6 +7,7 @@ import Home from "../../Containers/Home/Home";
 import ProductDisplay from "../../Containers/ProductDisplay/ProductDisplay";
 import Login from "../Login/login.js";
 import Register from "../Register/Register";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 const router = props => {
   return (
@@ -17,6 +18,7 @@ const router = props => {
         <Route path="/product" component={ProductDisplay} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/cart" component={ShoppingCart} />
         <Route path="/" exact component={Home} />
       </Switch>
     </Fragment>

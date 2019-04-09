@@ -17,7 +17,7 @@ const topUserMenu = props => {
       <NavLink style={navStyle} to="/register">
         Registrera
       </NavLink>
-      <NavLink style={navStyle} to="/">
+      <NavLink style={navStyle} to="/cart">
         Kassa
       </NavLink>
     </div>
