@@ -7,8 +7,6 @@ const dropDownNav = props => {
   const [open, setOpen] = useState(false);
   const [items] = useState(props.items);
 
-  console.log(items);
-
   let dropDownContent = null;
   if (open) {
     dropDownContent = <DropDownContent items={items} />;

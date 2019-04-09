@@ -24,7 +24,7 @@ const mainMenu = props => {
   return (
     <div className={style.MainMenu}>
       <div className={style.Liner}>
-        {width >= props.breakpoint ? "Kategorier" : null}
+        {width >= props.breakpoint ? <p>Kategorier</p> : null}
       </div>
       {headline}
       {shoots}

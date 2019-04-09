@@ -14,6 +14,7 @@
 }
 
 .ShoppingCartBtn i {
+  color: black;
   position: relative;
   top: -12px;
   text-shadow: 2px 2px 2px gray;

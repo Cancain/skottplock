@@ -67,7 +67,7 @@ const layout = props => {
   }
 
   return (
-    <div>
+    <div style={{ height: "100%" }}>
       <Header
         breakpoint={breakpoint}
         logoClicked={hideMenuHandler}
