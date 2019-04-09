@@ -7,7 +7,7 @@
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
   position: relative;
   font-weight: bolder;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   border-radius: 7px;
   padding: 4px;
   display: inline-block;

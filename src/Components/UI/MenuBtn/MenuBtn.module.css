@@ -1,37 +1,3 @@
-@keyframes menuOpen1 {
-  to {
-    transform: translate(0px, 13px) rotate(50deg) scale(1, 1);
-  }
-}
-@keyframes menuOpen2 {
-  to {
-    opacity: 0;
-  }
-}
-@keyframes menuOpen3 {
-  to {
-    transform: translate(0px, -13px) rotate(-50deg) scale(1, 1);
-  }
-}
-@keyframes menuClosed1 {
-  to {
-    transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
-  }
-}
-@keyframes menuClosed2 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes menuClosed3 {
-  to {
-    transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
-  }
-}
-
 .MenuBtn {
   position: relative;
   font-weight: bolder;
@@ -56,43 +22,6 @@
   margin: 0 0 5px 0;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
   border-radius: 7px;
-}
-
-.MenuBtn .Line1 {
-  animation-name: menuOpen1;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
-}
-
-.MenuBtn .Line2 {
-  animation-name: menuOpen2;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-
-.MenuBtn .Line3 {
-  animation-name: menuOpen3;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
-}
-.MenuBtn .Line1Closed {
-  transform: translate(0, 13px) rotate(50deg) scale(0.6, 1);
-  animation-name: menuClosed1;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
-}
-
-.MenuBtn .Line2Closed {
-  animation-name: menuClosed2;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-
-.MenuBtn .Line3Closed {
-  transform: translate(0, -13px) rotate(-50deg) scale(0.6, 1);
-  animation-name: menuClosed3;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
 }
 
 .Pressed {

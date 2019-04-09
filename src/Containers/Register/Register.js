@@ -5,7 +5,7 @@ import Button from "../../Components/UI/Button/Button";
 const register = props => {
   return (
     <div>
-      <h1>Registrera</h1>
+      <h1 style={{ marginTop: "30px" }}>Registrera</h1>
       <form>
         <FormInput
           name="name"

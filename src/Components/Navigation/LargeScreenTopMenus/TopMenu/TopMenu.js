@@ -7,7 +7,7 @@ const topMenu = props => {
   const navStyle = {
     color: "#a5da91",
     textShadow: "2px 2px 2px black",
-    margin: "0 20px 100px 0"
+    margin: "0 20px 0 0"
   };
   return (
     <div className={style.TopMenu}>

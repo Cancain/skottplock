@@ -2,6 +2,7 @@ import React from "react";
 
 const button = props => {
   const btnStyle = {
+    boxSizing: "border-box",
     width: props.width,
     height: props.height,
     backgroundColor: props.bgColor,

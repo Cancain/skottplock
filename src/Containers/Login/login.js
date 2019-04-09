@@ -6,7 +6,7 @@ import Button from "../../Components/UI/Button/Button";
 const login = props => {
   return (
     <div>
-      <h1>Logga in</h1>
+      <h1 style={{ marginTop: "30px" }}>Logga in</h1>
       <form>
         <FormInput
           text="Användarnamn"

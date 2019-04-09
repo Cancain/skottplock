@@ -1,0 +1,13 @@
+.DropDownNav {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto 0;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #a5da91;
+  text-shadow: 1px 1px 1px black;
+}
+
+.DropDownNav p {
+  cursor: pointer;
+}
