@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import style from "./ShoppingCart.module.css";
+import Button from "../../Components/UI/Button/Button";
 
 const shoppingCart = props => {
   const [items] = useState(props.items);
@@ -9,9 +10,10 @@ const shoppingCart = props => {
 
   const displayItems = items.map(item => {
     return (
-      <div className={style.ItemWrapper}>
-        <p>vara: {item.name}</p>
-        <p>pris: {item.price}</p>
+      <div key={item.id} className={style.ItemWrapper}>
+        <p>{item.name}</p>
+        <p>Antal: {item.ammount}</p>
+        <p>Pris: {item.price * item.ammount}</p>
       </div>
     );
   });
@@ -20,6 +22,7 @@ const shoppingCart = props => {
     <div>
       <h1 className={style.ShoppingCart}>Kassa</h1>
       <ul>{displayItems}</ul>
+      <Button text="Slutför beställning" />
     </div>
   );
 };

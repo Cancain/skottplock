@@ -4,7 +4,7 @@ import style from "./AddToCartBtn.module.css";
 
 const addToCartBtn = props => {
   return (
-    <div className={style.AddToCartBtn}>
+    <div onClick={props.click} className={style.AddToCartBtn}>
       <button>Lägg till i varukorg</button>
     </div>
   );

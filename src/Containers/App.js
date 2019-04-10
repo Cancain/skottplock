@@ -5,7 +5,10 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    items: [{ id: 0, name: "Stuff", price: 22, ammount: 2 }]
+    items: [
+      { id: 0, name: "Stuff", price: 22, ammount: 6 },
+      { id: 1, name: "More stuff", price: 22, ammount: 2 }
+    ]
   };
   render() {
     return (

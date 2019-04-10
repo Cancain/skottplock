@@ -10,12 +10,14 @@ const productDisplay = props => {
   const id = product.get("id");
   const subId = product.get("subId");
 
+  console.log(props);
+  
   return (
     <div className={style.ProductDisplay}>
       <h1>{clones[id].subItems[subId].name}</h1>
       <strong>Pris: {clones[id].subItems[subId].price} SEK</strong>
       <p>{clones[id].subItems[subId].desc}</p>
-      <AddToCartBtn />
+      <AddToCartBtn click={() => props.addToCart()} />
     </div>
   );
 };
