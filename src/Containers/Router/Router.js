@@ -18,7 +18,10 @@ const router = props => {
         <Route path="/product" component={ProductDisplay} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/cart" component={ShoppingCart} />
+        <Route
+          path="/cart"
+          render={() => <ShoppingCart items={props.items} />}
+        />
         <Route path="/" exact component={Home} />
       </Switch>
     </Fragment>

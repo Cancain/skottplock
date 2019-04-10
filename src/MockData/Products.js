@@ -41,6 +41,14 @@ const tomatSubItems = [
     parentId: 1,
     desc:
       "Kulturarv. Från 1885. En av de mest smakrika, äldre sorterna. Stora, rosa, plattrunda frukter på 200-400 gram, helt genomfärgade med fyllig underbar smak. För växthus och varma utelägen. Amatörsort."
+  },
+  {
+    id: 2,
+    name: "Loremplant",
+    price: 20,
+    parentId: 1,
+    desc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et pellentesque lorem. Proin porta turpis non massa porta, nec tempor mauris auctor. Nunc a neque at mauris varius pretium. Phasellus a magna velit. Aenean et tempus ex, non dictum ante. In aliquam dignissim mauris, vitae sollicitudin diam dictum a. Nullam diam diam, dapibus a nisi vel, auctor lacinia nunc. In rhoncus, libero sed blandit sagittis, lorem neque accumsan mi, ac bibendum lacus sem vel neque. Fusce sit amet quam volutpat, vehicula leo non, vulputate tortor. Vivamus lacinia ex mi, sit amet fringilla nisi volutpat sed. Nullam ipsum elit, laoreet eget rhoncus in, sollicitudin non tellus. Aenean vestibulum vulputate gravida. Nunc posuere mi a sapien sollicitudin, quis eleifend elit dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra magna fringilla lacus venenatis, et finibus augue tempor. Fusce tincidunt sem a elit pulvinar, faucibus cursus sem venenatis. Duis ullamcorper eu nisl ac ultrices. Vestibulum euismod urna odio, id pellentesque erat mollis in. Phasellus efficitur urna at lorem elementum posuere. Suspendisse fringilla, sapien sit amet accumsan placerat, arcu diam dignissim purus, rhoncus efficitur sapien erat vel justo. Donec at nunc feugiat, vulputate felis vel, ornare dui. Aenean accumsan arcu eget eros ultricies, mattis iaculis orci pretium. Donec facilisis in sem at scelerisque. Vivamus ut porta tellus. Integer elit nibh, malesuada nec scelerisque non, tempus quis magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ultricies mauris scelerisque eros congue aliquam vitae quis neque. Pellentesque sit amet scelerisque tellus, a lacinia ex. Morbi bibendum nunc felis, non interdum tortor laoreet pharetra."
   }
 ];
 

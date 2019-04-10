@@ -79,7 +79,7 @@ const layout = props => {
         {sidebar}
         <Content>
           {width <= breakpoint ? backdrop : null}
-          <Router />
+          <Router items={props.items} />
         </Content>
       </div>
     </div>

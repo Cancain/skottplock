@@ -5,12 +5,12 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    items: []
+    items: [{ id: 0, name: "Stuff", price: 22, ammount: 2 }]
   };
   render() {
     return (
       <div className="App">
-        <Layout />
+        <Layout items={this.state.items} />
       </div>
     );
   }
