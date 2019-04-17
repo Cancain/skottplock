@@ -1,12 +1,13 @@
 .Sidebar {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 75%;
   height: 180%;
   background-color: #2b6d12;
   z-index: 300;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-  border-top: 0;
 }
 
 .closed {
@@ -16,6 +17,6 @@
 @media (min-width: 1024px) {
   .Sidebar {
     width: 15%;
-    z-index: 1;
+    z-index: 0;
   }
 }
