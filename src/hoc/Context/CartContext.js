@@ -48,7 +48,7 @@ class CartProvider extends React.Component {
         item.id === existingItem.id &&
         item.parentId === existingItem.parentId
       ) {
-        existingItem.ammount++;
+        return existingItem.ammount++;
       }
     });
   };
