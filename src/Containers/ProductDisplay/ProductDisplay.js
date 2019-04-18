@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import style from "./ProductDisplay.module.css";
 import { clones } from "../../MockData/Products";
 import AddToCartBtn from "../../Components/UI/AddToCartBtn/AddToCartBtn";
-import CartProvider, { CartContext } from "../../hoc/Context/CartContext";
+import { CartContext } from "../../hoc/Context/CartContext";
 
 const productDisplay = props => {
   const context = useContext(CartContext);

@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 import style from "./ShoppingCart.module.css";
 import Button from "../../Components/UI/Button/Button";
 import { CartContext } from "../../hoc/Context/CartContext";
 
 const shoppingCart = props => {
-  const [items] = useState(CartContext);
+  const context = useContext(CartContext);
+  const items = context.items;
 
-  console.log(items);
+  items.forEach(item => {
+    console.log(item);
+  });
 
   return (
     <div>
