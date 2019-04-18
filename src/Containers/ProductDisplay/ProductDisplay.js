@@ -7,7 +7,6 @@ import CartProvider, { CartContext } from "../../hoc/Context/CartContext";
 
 const productDisplay = props => {
   const context = useContext(CartContext);
-  console.log(context);
 
   //Gets the product parents and the items id
   const product = new URLSearchParams(props.location.search);

@@ -7,30 +7,26 @@ class CartProvider extends React.Component {
     items: []
   };
 
+  getItems = () => {
+    return this.state.items;
+  };
+
   itemExists = item => {
     const items = this.state.items;
-    console.log("in itemExists()");
+    let duplicate = false;
 
-    items.map(existingItem => {
-      console.log("in itemsExist() Map");
-      console.log(item.id + " " + existingItem.id);
-      console.log(item.parentId + " " + existingItem.parentId);
+    items.forEach(existingItem => {
       if (
         item.id === existingItem.id &&
         item.parentId === existingItem.parentId
-      ) {
-        console.log("in itemExists() result: true");
-        return true;
-      } else {
-        console.log("in itemExists() result: false");
-        return false;
-      }
+      )
+        duplicate = true;
     });
+    return duplicate;
   };
 
   addNewItem = item => {
     const items = this.state.items;
-    console.log("item added");
 
     items.push(item);
 
@@ -39,19 +35,39 @@ class CartProvider extends React.Component {
     });
   };
 
-  incrementItem = item => {
+  incrementItem(item) {
     const items = this.state.items;
-    console.log("item incremented");
 
-    items.map(existingItem => {
+    items.forEach(existingItem => {
       if (
         item.id === existingItem.id &&
         item.parentId === existingItem.parentId
       ) {
-        return existingItem.ammount++;
+        existingItem.ammount++;
       }
     });
-  };
+
+    this.setState({
+      items: items
+    });
+  }
+
+  subtractItem(item) {
+    const items = this.state.items;
+
+    items.forEach(existingItem => {
+      if (
+        item.id === existingItem.id &&
+        item.parentId === existingItem.parentId
+      ) {
+        existingItem.ammount--;
+      }
+    });
+
+    this.setState({
+      items: items
+    });
+  }
 
   addOrUpdateItem = (id, parentId) => {
     //Creates an object from the parameters
@@ -62,10 +78,8 @@ class CartProvider extends React.Component {
     };
 
     if (this.itemExists(item)) {
-      console.log("exists");
       this.incrementItem(item);
     } else {
-      console.log("does not exist");
       this.addNewItem(item);
     }
   };
