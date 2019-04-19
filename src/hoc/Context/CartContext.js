@@ -79,7 +79,7 @@ class CartProvider extends React.Component {
         item.id === existingItem.id &&
         item.parentId === existingItem.parentId
       ) {
-        items.splice(index);
+        items.splice(index, 1);
       }
     });
 

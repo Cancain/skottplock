@@ -31,9 +31,16 @@ const shoppingCart = props => {
     context.removeItem(item);
   };
 
+  let index = 0;
+  const generateId = () => {
+    const id = index;
+    index++;
+    return id;
+  };
+
   const displayProducts = (item, price) => {
     return (
-      <li key={item.id} className={style.ItemWrapper}>
+      <li key={generateId()} className={style.ItemWrapper}>
         <p>{clones[item.parentId].subItems[item.id].name}</p>
         <div className={style.Container}>
           <p>Antal: {item.ammount}</p>
