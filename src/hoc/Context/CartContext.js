@@ -52,7 +52,7 @@ class CartProvider extends React.Component {
     });
   }
 
-  subtractItem(item) {
+  decrementItem(item) {
     const items = this.state.items;
 
     items.forEach(existingItem => {
@@ -60,7 +60,9 @@ class CartProvider extends React.Component {
         item.id === existingItem.id &&
         item.parentId === existingItem.parentId
       ) {
-        existingItem.ammount--;
+        if (existingItem.ammount > 1) {
+          existingItem.ammount--;
+        }
       }
     });
 
@@ -89,7 +91,9 @@ class CartProvider extends React.Component {
       <CartContext.Provider
         value={{
           items: this.state.items,
-          addItem: (id, parentId) => this.addOrUpdateItem(id, parentId)
+          addItem: (id, parentId) => this.addOrUpdateItem(id, parentId),
+          incrementItem: item => this.incrementItem(item),
+          decrementItem: item => this.decrementItem(item)
         }}
       >
         {this.props.children}
