@@ -71,6 +71,23 @@ class CartProvider extends React.Component {
     });
   }
 
+  removeItem(item) {
+    const items = this.state.items;
+
+    items.forEach((existingItem, index) => {
+      if (
+        item.id === existingItem.id &&
+        item.parentId === existingItem.parentId
+      ) {
+        items.splice(index);
+      }
+    });
+
+    this.setState({
+      items: items
+    });
+  }
+
   addOrUpdateItem = (id, parentId) => {
     //Creates an object from the parameters
     const item = {
@@ -93,7 +110,8 @@ class CartProvider extends React.Component {
           items: this.state.items,
           addItem: (id, parentId) => this.addOrUpdateItem(id, parentId),
           incrementItem: item => this.incrementItem(item),
-          decrementItem: item => this.decrementItem(item)
+          decrementItem: item => this.decrementItem(item),
+          removeItem: item => this.removeItem(item)
         }}
       >
         {this.props.children}

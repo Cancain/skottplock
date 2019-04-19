@@ -27,16 +27,29 @@ const shoppingCart = props => {
     context.decrementItem(item);
   };
 
+  const removeItemHandler = item => {
+    context.removeItem(item);
+  };
+
   const displayProducts = (item, price) => {
     return (
       <li key={item.id} className={style.ItemWrapper}>
         <p>{clones[item.parentId].subItems[item.id].name}</p>
-        <p>Antal: {item.ammount}</p>
-        <div className={style.Arrows}>
-          <i onClick={() => upArrowClickHandler(item)}>{"<"}</i>
-          <i onClick={() => downArrowClickHandler(item)}>{">"}</i>
+        <div className={style.Container}>
+          <p>Antal: {item.ammount}</p>
+          <div className={style.Arrows}>
+            <i onClick={() => upArrowClickHandler(item)}>{"<"}</i>
+            <i onClick={() => downArrowClickHandler(item)}>{">"}</i>
+          </div>
         </div>
-        <p>Pris: {price} SEK</p>
+        <div className={style.Container}>
+          <p>Pris: {price} SEK</p>
+          <i
+            onClick={() => removeItemHandler(item)}
+            className="fas fa-ban"
+            style={{ color: "red" }}
+          />
+        </div>
       </li>
     );
   };
