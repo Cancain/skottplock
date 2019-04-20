@@ -9,8 +9,10 @@ const shoppingCart = props => {
   const context = useContext(CartContext);
   const items = context.items;
 
+  /*
+   *Helpers
+   */
   let totalPrice = 0;
-
   const getPrice = (price, ammount) => {
     return price * ammount;
   };
@@ -18,6 +20,10 @@ const shoppingCart = props => {
   const updateTotalPrice = newPrice => {
     return (totalPrice += newPrice);
   };
+
+  /*
+   *Click hadlers
+   */
 
   const upArrowClickHandler = item => {
     context.incrementItem(item);

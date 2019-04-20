@@ -11,6 +11,7 @@
     max-width: 80%;
     min-width: 80%;
     margin: auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
   }
 }
 @media (min-width: 1402px) {
@@ -18,5 +19,6 @@
     max-width: 60%;
     min-width: 60%;
     margin: auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
   }
 }

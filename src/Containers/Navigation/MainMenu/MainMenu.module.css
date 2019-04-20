@@ -11,6 +11,10 @@
   margin-top: 0;
 }
 
+.MainMenu h1 {
+  font-size: 2.8rem;
+}
+
 @media (min-width: 1024px) {
   .Liner {
     background-color: rgba(0, 0, 0, 0.5);
@@ -25,6 +29,7 @@
   .MainMenu {
     border-radius: 12px;
     /* border: 1px solid rgba(0, 0, 0, 0.5); */
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
     background-color: #144900;
   }
 }

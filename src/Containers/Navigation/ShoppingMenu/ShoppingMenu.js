@@ -1,14 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-import NavigationItem from "../../../Components/Navigation/NavigationItem/NavigationItem";
+import style from "./ShoppingMenu.module.css";
 
 const shoppingMenu = props => {
   return (
-    <div>
+    <div className={style.ShoppingMenu}>
       <h1>Kassameny</h1>
-      <NavigationItem text={"Stuff"} />
-      <NavigationItem text={"More stuff"} />
-      <NavigationItem text={"Even more stuff"} />
+      <div>
+        <NavLink to="/cart">Kassa</NavLink>
+        <NavLink to="/login">Logga in</NavLink>
+        <NavLink to="/register">Registrera</NavLink>
+      </div>
     </div>
   );
 };
