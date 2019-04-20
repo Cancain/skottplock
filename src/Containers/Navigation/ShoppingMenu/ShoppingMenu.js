@@ -8,9 +8,15 @@ const shoppingMenu = props => {
     <div className={style.ShoppingMenu}>
       <h1>Kassameny</h1>
       <div>
-        <NavLink to="/cart">Kassa</NavLink>
-        <NavLink to="/login">Logga in</NavLink>
-        <NavLink to="/register">Registrera</NavLink>
+        <NavLink onClick={props.productClicked} to="/cart">
+          Kassa
+        </NavLink>
+        <NavLink onClick={props.productClicked} to="/login">
+          Logga in
+        </NavLink>
+        <NavLink onClick={props.productClicked} to="/register">
+          Registrera
+        </NavLink>
       </div>
     </div>
   );

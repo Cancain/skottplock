@@ -51,7 +51,10 @@ const layout = props => {
   let menu = (
     <MainMenu breakpoint={breakpoint} productClicked={hideMenuHandler} />
   );
-  if (activeMenu === "shoppingMenu") menu = <ShoppingMenu />;
+  if (activeMenu === "shoppingMenu")
+    menu = (
+      <ShoppingMenu breakpoint={breakpoint} productClicked={hideMenuHandler} />
+    );
 
   const backdrop = (
     <Backdrop clicked={hideMenuHandler} closed={sideDrawerClosed} />
